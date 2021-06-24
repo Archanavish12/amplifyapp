@@ -55,22 +55,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
+      <h1>Chest X-Ray App</h1>
       <input
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
-        placeholder="Note name"
+        placeholder="XRayname"
         value={formData.name}
       />
       <input
         onChange={e => setFormData({ ...formData, 'description': e.target.value})}
-        placeholder="Note description"
+        placeholder="Description"
         value={formData.description}
       />
       <input
   type="file"
   onChange={onChange}
 />
-      <button onClick={createNote}>Create Note</button>
+      <button onClick={createNote}>Upload Image</button>
       <div style={{marginBottom: 30}}>
        
         {
@@ -78,16 +78,17 @@ function App() {
     <div key={note.id || note.name}>
       <h2>{note.name}</h2>
       <p>{note.description}</p>
-      <button onClick={() => deleteNote(note)}>Delete note</button>
+      <button onClick={() => deleteNote(note)}>Delete Image</button>
       {
         note.image && <img src={note.image} style={{width: 400}} />
       }
     </div>
-  ))
-}
+      ))
+      }
+     
       </div>
       <AmplifySignOut />
-    </div>
+      </div>
   );
 }
 
