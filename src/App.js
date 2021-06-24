@@ -76,8 +76,8 @@ function App() {
         {
   notes.map(note => (
     <div key={note.id || note.name}>
-      <h2>{note.name}</h2>
-      <p>{note.description}</p>
+      <h2>XRay Name: {note.name}</h2>
+      <h3>Description: {note.description}</h3>
       
       {
         note.image && <img src={note.image} style={{width: 400}} />
